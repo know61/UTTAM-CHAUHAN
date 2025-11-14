@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fee Details</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/fee.css">
+</head>
+<body>
+    <!-- TOP BAR (same as dashboard) -->
+  <header class="topbar">
+    <button class="icon-btn menu" aria-label="Open menu"></button>
+
+    <div class="brand">
+      <img src="assets/logo.png" alt="Portal Logo">
+    </div>
+
+    <nav class="actions">
+      <button class="icon-btn circ back" title="Back" onclick="history.back()"></button>
+      <button class="icon-btn circ stats" title="Analytics"></button>
+      <a class="icon-btn circ home" title="Home" href="dashboard.html"></a>
+
+      <div class="user">
+        <span class="name">ANSHUL CHAUHAN</span>
+        <img class="avatar" src="assets/profile-photo.png" alt="Profile photo">
+        <button class="icon-btn caret" aria-label="Account menu"></button>
+        <div class="dropdown" data-open="false">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="dashboard-layout">
+
+    <aside class="side-menu">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Fee Submission</a></li>
+                <li><a href="#">Fee Receipt</a></li>
+                <li><a href="#">Transaction History</a></li>
+                <li><a href="#">Challan</a></li>
+                <li><a href="#">Fee Installment</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content-area">
+    <div class="container">
+        <div class="main-layout">
+            <div class="left-column">
+                <div class="notice">
+                    <p><span class="star">★</span>Kindly download receipt after twelve (12) hours from fee receipt tab</p>
+                    <p><span class="star">★</span>For any discrepancy in fee due amount either please raise query in Grievance section <span class="or">OR</span> call at <span class="phone">7088413131</span></p>
+                    <p class="timing">Call timing 9am to 5pm (Monday to Saturday except holidays)</p>
+                </div>
+                <div class="fee-type-selector">
+                    <label for="fee-type">Fee Type</label>
+                    <select id="fee-type" name="fee-type">
+                        <option value="course-fee">Course Fee</option>
+                    </select>
+                </div>
+
+                <div class="details-card academic-fees">
+                    <div class="card-header">
+                        <h3>Academic Fee Detail (Amount in ₹)</h3>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Sem/Year</th>
+                                    <th>Fee Head</th>
+                                    <th>Current Dues Amount</th>
+                                    <th>Scholarship / Discount</th>
+                                    <th>Paid Amount</th>
+                                    <th>Balance Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1.</td><td>3rd yr</td><td>Examination Fee</td><td>9,000.00</td><td>0.00</td><td>9,000.00</td><td>0.00</td></tr>
+                                <tr><td>2.</td><td>3rd yr</td><td>Library Fee</td><td>7,000.00</td><td>0.00</td><td>7,000.00</td><td>0.00</td></tr>
+                                <tr><td>3.</td><td>3rd yr</td><td>Insurance Cover</td><td>1,000.00</td><td>0.00</td><td>1,000.00</td><td>0.00</td></tr>
+                                <tr><td>4.</td><td>3rd yr</td><td>Student Welfare Fee</td><td>1,500.00</td><td>0.00</td><td>1,500.00</td><td>0.00</td></tr>
+                                <tr><td>5.</td><td>3rd yr</td><td>Sport fee</td><td>1,000.00</td><td>0.00</td><td>1,000.00</td><td>0.00</td></tr>
+                                <tr><td>6.</td><td>3rd yr</td><td>Online</td><td>1,000.00</td><td>0.00</td><td>1,000.00</td><td>0.00</td></tr>
+                                <tr><td>7.</td><td>3rd yr</td><td>Transport Fee</td><td>3,300.00</td><td>0.00</td><td>3,300.00</td><td>0.00</td></tr>
+                                <tr><td>8.</td><td>3rd yr</td><td>Tuition Fee</td><td>40.00</td><td>1400.00</td><td>26.00</td><td>0.00</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="table-pagination">
+                            <span>◄◄</span>
+                            <span>◄</span>
+                            <span class="page-number">Page 1 of 1</span>
+                            <span>►</span>
+                            <span>►►</span>
+                            <span class="view-info">View 1 - 8 of 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="details-card">
+                    <div class="card-header">
+                        <h3>Student Details</h3>
+                    </div>
+                    <div class="card-body info-grid">
+                        <span class="label">Student Name :</span><span class="value">ANSHUL CHAUHAN</span>
+                        <span class="label">Admission No. :</span><span class="value">23021142</span>
+                        <span class="label">Program :</span><span class="value">BACHELOR OF TECHNOLOGY / (CSE)</span>
+                        <span class="label">Curr. Year :</span><span class="value">3</span>
+                        <span class="label">Curr. Semester :</span><span class="value">5</span>
+                    </div>
+                </div>
+
+                <div class="details-card">
+                    <div class="card-header">
+                        <h3>Fee Details</h3>
+                    </div>
+                    <div class="card-body fee-details-body">
+                        <div class="info-item"><span class="label">Total Due (₹) :</span><span class="value amount">43.00</span></div>
+                        <div class="info-item"><span class="label">Scholarship/Discount (₹) :</span><a href="#">View Detail</a><span class="value amount">18.00</span></div>
+                        <div class="info-item"><span class="label">Paid Amount (₹) :</span><span class="value amount">288.00</span></div>
+                        <div class="info-item"><span class="label">Excess Amount (₹) :</span><span class="value amount">0.00</span></div>
+                        <div class="info-item"><span class="label">Fee Frequency :</span><span class="value amount">Yearly Basis</span></div>
+                        <div class="info-item"><span class="label">Fee Installment (₹) :</span><a href="#">View Detail</a></div>
+                    </div>
+                </div>
+                
+                <div class="final-summary">
+                    <div class="summary-item balance">
+                        <span class="label">Balance Amount (₹) :</span>
+                        <span class="value">0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Amount To Pay (Academic) (₹) :</span>
+                        <input type="text" value="0.00" readonly>
+                    </div>
+                    <div class="summary-item total">
+                        <span class="label">Total Amount To Pay (₹) :</span>
+                        <input type="text" value="0.00" readonly>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Payment Date :</span>
+                        <span class="value">30/08/2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

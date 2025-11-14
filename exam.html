@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fee Details</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/exam.css">
+</head>
+<body>
+    <!-- TOP BAR (same as dashboard) -->
+  <header class="topbar">
+    <button class="icon-btn menu" aria-label="Open menu"></button>
+
+    <div class="brand">
+      <img src="assets/logo.png" alt="Portal Logo">
+    </div>
+
+    <nav class="actions">
+      <button class="icon-btn circ back" title="Back" onclick="history.back()"></button>
+      <button class="icon-btn circ stats" title="Analytics"></button>
+      <a class="icon-btn circ home" title="Home" href="dashboard.html"></a>
+
+      <div class="user">
+        <span class="name">UTTAM SINGH CHAUHAN</span>
+        <img class="avatar" src="assets/profile-photo.png" alt="Profile photo">
+        <button class="icon-btn caret" aria-label="Account menu"></button>
+        <div class="dropdown" data-open="false">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dashboard-layout">
+
+    <aside class="side-menu">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Sessional / Mid / External Marks Statement</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Back Papers </a></li>
+                <li><a href="#">Transaction History</a></li>
+                <li><a href="#">Admit Card</a></li>
+                <li><a href="#">Subject Revaluation</a></li>
+                <li><a href="#">Seating Arrangement</a></li>
+                <li><a href="#">Marks History</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="exam-summary-card">
+        <h2>Exam Summary</h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th></th> <th>Year/Sem</th>
+                    <th>SGPA</th>
+                    <th>Back Paper(s)</th>
+                    <th>Result Status</th>
+                    <th>Marksheet View</th>
+                    <th>Grade View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>7.46</td>
+                    <td>0</td>
+                    <td>Pass</td>
+                    <td><a href="pdfs/marksheet1.pdf">View Detail</a></td>
+                    <td><a href="pdfs/grade1.pdf">View</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>7.09</td>
+                    <td>0</td>
+                    <td>Pass</td>
+                    <td><a href="pdfs/marksheet2.pdf">View Detail</a></td>
+                    <td><a href="pdfs/grade2.pdf">View</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6.48</td>
+                    <td>0</td>
+                    <td>Pass</td>
+                    <td><a href="pdfs/marksheet3.pdf">View Detail</a></td>
+                    <td><a href="pdfs/grade3.pdf">View</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>7.12</td>
+                    <td>0</td>
+                    <td>Pass</td>
+                    <td><a href="pdfs/marksheet4.pdf">View Detail</a></td>
+                    <td><a href="pdfs/grade4.pdf">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

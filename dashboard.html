@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus ERP – Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <button class="icon-btn menu" aria-label="Open menu"></button>
+
+    <div class="brand">
+      <img src="assets/logo.png" alt="Portal Logo" />
+    </div>
+
+    <nav class="actions">
+      <button class="icon-btn circ back"   title="Back"></button>
+      <button class="icon-btn circ stats"  title="Dashboard"></button>
+      <button class="icon-btn circ home"   title="Home"></button>
+
+      <div class="user">
+        <span class="name">UTTAM SINGH CHAUHAN</span>
+        <img class="avatar" src="assets/profile-photo1.jpeg" alt="Profile photo" />
+        <button class="icon-btn caret" aria-label="Account menu"></button>
+
+        <!-- (optional) dropdown; purely visual for now -->
+        <div class="dropdown" data-open="false">
+          <a href="#">Change Password</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- NOTICE STRIP -->
+<section class="notice-wrap">
+  <div class="notice-bar">
+    <span>75% attendance is mandatory to be eligible for appearing in the end semester examinations.</span>
+  </div>
+</section>
+
+<main class="dashboard">
+  <div class="page-grid">
+    <!-- LEFT COLUMN -->
+    <aside class="left-col">
+
+      <!-- Profile header card -->
+      <section class="profile-card">
+        <div class="hero">
+          <img class="avatar-lg" src="assets/profile-photo1.jpeg" alt="Profile photo" />
+          <h2 class="name">UTTAM SINGH CHAUHAN</h2>
+          <div class="minor id">230213579</div>
+
+          <div class="contacts">
+            <div class="c"><span class="i mail" aria-hidden="true"></span>uttamchauhan9090@gmail.com</div>
+            <div class="c"><span class="i phone" aria-hidden="true"></span>9837917449</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ID Card block -->
+      <section class="idcard">
+        <div class="idcard-head">
+          <span class="id-icon" aria-hidden="true"></span>
+          ID Card
+        </div>
+
+        <div class="id-rows">
+          <div class="row"><dt>Father Name :</dt><dd>RANJEET SINGH CHAUHAN</dd></div>
+          <div class="row"><dt>Mother Name :</dt><dd>KALPANA DEVI</dd></div>
+          <div class="row"><dt>D.O.B. :</dt><dd>20/08/2004</dd></div>
+          <div class="row"><dt>Official Email :</dt><dd>230213579@geu.ac.in</dd></div>
+          <div class="row"><dt>College :</dt><dd>Graphic Era (Deemed to be University)</dd></div>
+          <div class="row"><dt>Course :</dt><dd>BACHELOR OF TECHNOLOGY</dd></div>
+          <div class="row"><dt>Specialization :</dt><dd>CORE</dd></div>
+          <div class="row"><dt>Year/Sem :</dt><dd>5</dd></div>
+          <div class="row"><dt>Branch :</dt><dd>COMPUTER SCIENCE AND ENGINEERING </dd></div>
+          <div class="row"><dt>Section :</dt><dd>CSE-ARQ</dd></div>
+          <div class="row"><dt>Class Roll No. :</dt><dd>20</dd></div>
+          <div class="row"><dt>Enroll No. :</dt><dd>GE-232024013</dd></div>
+          <div class="row"><dt>University Roll No. :</dt><dd>2024013</dd></div>
+          <div class="row"><dt>HighSchool % :</dt><dd>85.67</dd></div>
+          <div class="row"><dt>Intermediate % :</dt><dd>69.40</dd></div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- RIGHT COLUMN (we'll fill later) -->
+    <section class="right-col">
+    <!-- MODULES PANEL -->
+<section class="module-panel">
+  <!-- top toolbar: pill search (right) + tiny menu btn -->
+  <div class="module-toolbar">
+    <div class="flex-spacer"></div>
+
+    <div class="module-search">
+      <input type="text" placeholder="Search Modules.." />
+      <span class="s-icon" aria-hidden="true"></span>
+    </div>
+
+    <button class="tiny-menu" aria-label="More"></button>
+  </div>
+
+  <!-- grid: 7 fixed columns (we’ll make responsive later) -->
+  <div class="module-grid">
+    <!-- Row 1 -->
+    <a class="module-item col-1" href="#">
+      <img src="assets/academic.png" alt="" />
+      <span>Academic</span>
+    </a>
+    <a class="module-item col-2" href="#">
+      <img src="assets/fee.png" alt="" />
+      <span>Fee</span>
+    </a>
+    <a class="module-item col-3" href="#">
+      <img src="assets/circular.png" alt="" />
+      <span>Circular</span>
+    </a>
+    <a class="module-item col-4" href="exam.html">
+      <img src="assets/exam.png" alt="" />
+      <span>Exam</span>
+    </a>
+    <a class="module-item col-5" href="#">
+      <img src="assets/placement.png" alt="" />
+      <span>Placement</span>
+    </a>
+    <a class="module-item col-6" href="#">
+      <img src="assets/hostel.png" alt="" />
+      <span>Hostel</span>
+    </a>
+    <!-- Row 2 (left cell only) -->
+    <a class="module-item col-1 row-2" href="#">
+      <img src="assets/grievance.png" alt="" />
+      <span>Grievance</span>
+    </a>
+  </div>
+</section>
+<!-- WIDGET CARDS -->
+<section class="widgets-grid">
+  <!-- 1 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/other-services.png" alt="" />
+      <h3>Other Services</h3>
+    </header>
+    <div class="body">
+      <a class="more" href="#">More..</a>
+    </div>
+  </article>
+
+  <!-- 2 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/circular-notices.png" alt="" />
+      <h3>Circular Notices</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 3 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/manual.png" alt="" />
+      <h3>Manual</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 4 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/news.png" alt="" />
+      <h3>News</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 5 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/results.png" alt="" />
+      <h3>Results</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 6 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/results.png" alt="" />
+      <h3>Today's Substitution</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 7 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/notifications.png" alt="" />
+      <h3>Notifications</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 8 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/crc-tp.png" alt="" />
+      <h3>Corporate Resource Centre (T &amp; P)</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 9 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/exams.png" alt="" />
+      <h3>Exam</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+
+  <!-- 10 -->
+  <article class="widget">
+    <header>
+      <img class="h-icon" src="assets/events.png" alt="" />
+      <h3>Events</h3>
+    </header>
+    <div class="body"><a class="more" href="#">More..</a></div>
+  </article>
+</section>
+
+</section>
+  </div>
+</main>
+
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

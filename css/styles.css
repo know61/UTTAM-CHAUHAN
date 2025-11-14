@@ -1,0 +1,206 @@
+:root{
+    --panel-w: 470px;
+    --radius: 12px;
+    --shadow: 0 12px 60px rgba(1, 1, 1, 0.28);
+    --border: 1px solid rgba(255, 255, 255, 0.75);
+    --accent: #47b4f4;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:#222;
+    background:#ffffff;
+  }
+  
+  /* Full-bleed campus image */
+  .page{ min-height:100%; position:relative; }
+  /* keep the bg at the bottom */
+/* Background stays at the bottom */
+.bg{
+    position:absolute; inset:0;
+    background:url("../assets/campus-bg.jpg") center/cover no-repeat fixed;
+    filter:saturate(1) brightness(.98);
+    z-index: 0;                     /* bottom */
+  }
+  
+  /* Subtle right-side brightening like the screenshot */
+  /* REMOVE the overlay completely */
+.page::after{ content:none; }
+  
+  /* -------- Right-centered glass panel (matches wide screenshot) -------- */
+ /* Transparent login panel above bg */
+.login-panel{
+    position:absolute;
+    right:90px; top:50%; transform:translateY(-50%);
+    width:390px;
+    height:660px;
+    background: rgba(91, 88, 88, 0.34);/* ⬅️ no white */
+    backdrop-filter: none;          /* ⬅️ no blur */
+    -webkit-backdrop-filter: none;
+    border: none;                   /* optional: no border */
+    overflow:hidden;
+    padding:0;
+    z-index: 1;                     /* above bg */
+  }
+  
+  /* Keep banner/separator but make them translucent so the bg shows through a bit */
+.panel-banner{
+    height:120px;
+    background: rgb(230,244,247);
+    display:flex; align-items:center;
+    padding:18px;
+  }
+  .panel-banner img{
+    max-height:80px; width:auto; object-fit:contain;
+  }
+  
+  /* Thin grey separator strip (like the screenshot) */
+ 
+  
+  /* Form body */
+  .form{
+    padding:18px;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  
+  /* Input rows with left icon box */
+  .field-row{
+    display:flex; align-items:center;
+    border:1px solid rgba(255,255,255,.85);
+    border-radius:8px; overflow:hidden;
+  }
+  /* Left icon cell size like your screenshot */
+/* Left icon cell size like your screenshot */
+/* Left icon cell (unchanged except size if you want) */
+.left-icon{ width:64px; min-width:64px; height:48px; display:grid; place-items:center; border-right:2px solid rgba(255,255,255,.85); background:transparent; }
+.ico{ width:20px; height:20px; background-size:24px 24px; background-repeat:no-repeat; background-position:center; opacity:1; }
+
+/* User (thicker outline under the head) */
+.ico.user{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='3.5' fill='%23000' stroke='%23000' stroke-width='1.6'/%3E%3Cpath d='M4 19c.7-3.6 4-6 8-6s7.3 2.4 8 6' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Key (heavier ring + key bars) */
+.ico.key{
+  background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Ccircle cx=%229%22 cy=%2212%22 r=%223.5%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222.6%22/%3E%3Cpath d=%22M12.5 12H21M16.5 12v3M14.5 12v2%22 stroke=%22%23000%22 stroke-width=%222.6%22 stroke-linecap=%22round%22/%3E%3C/svg%3E');
+}
+
+  .field-row input{
+    flex:1; height:48px; border:0; outline:0;
+    background:#f7f9fc;               /* light blue like screenshot */
+    padding:0 14px; font-size:15px; color:#111;
+  }
+  .toggle.eye{
+    width:46px; height:48px; border:0; cursor:pointer; background:#e6f0ff no-repeat center/24px 24px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 12s4-6 10-6s10 6 10 6s-4 6-10 6S2 12 2 12Z' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='12' r='3' fill='none' stroke='%23000' stroke-width='2.6'/%3E%3C/svg%3E");
+  }
+  /* Eye with slash (bold) when password is visible */
+  .toggle.eye.eye-off{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 12s4-6 10-6s10 6 10 6s-4 6-10 6S2 12 2 12Z' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='12' r='3' fill='none' stroke='%23000' stroke-width='2.6'/%3E%3Cpath d='M3 3L21 21' stroke='%23000' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+  /* optional hover focus polish */
+  .toggle.eye:hover{ filter:brightness(.95); }
+  
+  
+  /* -------- Captcha row (refresh button + graphic field) -------- */
+  .captcha-block{
+    display:flex;
+    align-items:center;
+    overflow:hidden;                 /* rounds inner corners together */
+    gap:0;                           /* no gap between cells */
+  }
+  
+  /* Keep only the refresh button on the left */
+  .refresh-btn{
+    width:72px; height:55px; border-radius:8px; border:1px solid rgba(255,255,255,.85);
+    background:#ffffff00 no-repeat center/24px 24px; cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306a94d' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12a8 8 0 0 1 13.66-5.66'/%3E%3Cpath d='M17 3v4h-4'/%3E%3Cpath d='M20 12a8 8 0 0 1-13.66 5.66'/%3E%3Cpath d='M7 21v-4h4'/%3E%3C/svg%3E");
+  }
+  
+  /* The captcha graphic box uses your image as background */
+  .captcha-img{
+    flex:1; height:55px; 
+    border:1px solid rgba(255,255,255,.85);
+    display:flex; align-items:center; justify-content:center;
+    /* IMPORTANT: ensure your file is named assets/captcha-bg.png */
+    background: #fff url("../assets/captcha-bg.png") center/cover no-repeat;
+    user-select:none;
+  }
+  
+  /* Captcha input field below */
+  .captcha-input{
+    height:48px; width:100%;
+    border:1px solid rgba(255,255,255,.85);
+    border-radius:8px;
+    background:rgba(255,255,255,.95);
+    padding:0 14px; font-size:15px; color:#111;
+  }
+  
+  /* Big blue LOGIN button */
+  .btn{ height:46px; border:0; border-radius:5px; cursor:pointer; font-weight:600; letter-spacing:.3px; }
+  .btn.primary.big{
+    height:52px; background:var(--accent); color:#fff;
+    
+  }
+  
+  /* Right-aligned links & white fineprint, like screenshot */
+  .links.right{ text-align:right; margin-top:6px; }
+  .links a{ color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.4); }
+  .fineprint{ font-size:12px; text-align:center; }
+  .fineprint.invert{
+    margin-top:10px; color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+  
+  /* Mobile safety */
+  @media (max-width: 900px){
+    .login-panel{
+      right:12px; width:min(calc(100% - 24px), 470px);
+    }
+  }
+
+  /* keep all inputs left-aligned by default */
+.field-row input,
+.captcha-input {
+  text-align: left;
+}
+
+/* center ONLY the captcha placeholder (and the field before typing) */
+.captcha-input {
+  text-align: center;               /* placeholder centered */
+}
+
+/* once the user types, snap captcha text to left */
+.captcha-input:not(:placeholder-shown) {
+  text-align: left;
+}
+
+/* optional: hide the hint on focus */
+.captcha-input:focus::placeholder {
+  color: transparent;
+}
+
+.links-sep{
+    height:1px;
+    margin: 2% 0;
+    background: linear-gradient(
+      90deg,
+      rgb(255, 255, 255),
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)
+    );
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.2));
+  }
+  /* Center the "Powered by" block */
+.links.center{
+    text-align: center;   /* centers the inline text + link */
+    margin-top: 8px;      /* optional spacing */
+    color: #fff;          /* you can keep/remove since you had inline color */
+  }
+  .links.center a{
+    color: #fff;          /* match the text color */
+  }
+  
+  

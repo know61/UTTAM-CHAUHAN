@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0; /* Changed */
+    padding: 0; /* Changed */
+}
+
+/* --- Main Dashboard Layout --- */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+body { padding: 0; }
+
+.side-menu {
+    width: 250px;
+    background-color: rgb(6,17,135); /* Dark blue background */
+    color: white;
+}
+
+.side-menu nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu nav li {
+    margin-bottom: 2px;
+}
+
+.side-menu nav a {
+    display: block;
+    color: #ffffff; /* Light text color for contrast */
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 1px solid #FFFFFF;
+}
+
+/* Main content styling */
+main {
+    /* Adjust margin-left to match your sidebar's width */
+    margin-left: 240px; 
+    padding-left: 215px;
+    background-color: #2760b5; /* Light background for the content area */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.exam-summary-container h2 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+/* Wrapper for the table to apply border and background */
+.table-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden; /* Ensures the border-radius is applied to the table corners */
+}
+
+/* Table general styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between cell borders */
+}
+
+/* Table Header (thead) */
+th {
+    background-color: #f8f9fa; /* Light grey header background */
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Table Body Cells (td) */
+td {
+    padding: 12px 15px;
+    text-align: center;
+    color: #212529;
+    font-size: 14px;
+    border-top: 1px solid #dee2e6; /* Horizontal lines between rows */
+}
+
+/* Link styling inside the table */
+td a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+/*---------------------------------------------------------------------*/
+
+/* Exam summary card container */
+.exam-summary-card {
+    margin-left: 30px; /* pushes it slightly to the right */
+    border-radius: 6px;
+    padding: 15px;
+    width: fit-content;  /* adjusts to table width */
+    max-width: 100%;     /* prevents overflow */
+}
+
+/* Exam summary heading */
+.exam-summary-card h2 {
+    color: #2760b5;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cfd8dc;
+    padding-bottom: 8px;
+}
+
+/* Table wrapper */
+.summary-table {
+    width: 100%;
+    border-collapse: collapse; /* ensures grid style */
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Header row */
+.summary-table th {
+    background: linear-gradient(to bottom, #e6f0fa, #d9eafc);
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+}
+
+/* Body rows */
+.summary-table td {
+    padding: 10px;
+    border: 1px solid #cfd8dc; /* this gives grid lines */
+    background: #fff;
+}
+
+/* Row hover effect */
+.summary-table tbody tr:hover {
+    background-color: #f4f9ff;
+}
+
+/* Links inside the table */
+.summary-table td a {
+    color: #0033cc;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.summary-table td a:hover {
+    text-decoration: underline;
+}
